@@ -1,0 +1,10 @@
+{
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.typeCheckingMode": "off",
+    "python.autoComplete.extraPaths": [
+        "/Users/vitsiozo/Desktop/MSc AI/Modules/Term1/INM702-Programming and Mathematics for Artificial Intelligence/Coursework/Parametrizable/"
+    ],
+    "python.analysis.extraPaths": [
+        "/Users/vitsiozo/Desktop/MSc AI/Modules/Term1/INM702-Programming and Mathematics for Artificial Intelligence/Coursework/Parametrizable/"
+    ]
+}
