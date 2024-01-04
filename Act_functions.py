@@ -1,6 +1,7 @@
 # Define our activation functions and their derivatives here
 
 from Activation import Activation
+from Layer import Layer
 import numpy as np
 
 class Sigmoid(Activation):
@@ -18,11 +19,5 @@ class ReLU(Activation):
             return np.maximum(0,x)
         
         def relu_prime(x):
-            result = []
-            for i in x:
-                if i > 0:
-                    result.append(1)
-                else:
-                    result.append(0)
-            return result
+           return np.where(x > 0, 1, 0)
         

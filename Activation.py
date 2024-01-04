@@ -11,8 +11,7 @@ class Activation(Layer):
     # During forward pass we return the activated input as output
     def forward_pass(self, input):
         self.input = input
-        self.output = self.act_function(self.input)
-        return self.output
+        return self.act_function(self.input)
     
     # dE/dX = dE/dY * f_prime (be careful, this is an element-wise multiplication)
     def backward_pass(self, dE_dY, learning_rate):

@@ -5,6 +5,10 @@ import pandas as pd
 from keras.datasets import mnist
 from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler
+from Connected import Connected
+from Act_functions import Sigmoid
+from MSE import mse, mse_prime
+from Network import train, predict
 
 # Use keras to import MNIST dataset
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -36,14 +40,14 @@ preserving the total number of input samples. We print the resulting size.'''
 X_train = X_train.reshape((X_train.shape[0], -1))
 X_test = X_test.reshape((X_test.shape[0], -1))
 
-#print ("shape of X_train {}".format(X_train.shape))
+print ("shape of X_train {}".format(X_train.shape))
 #print ("shape of X_test {}".format(X_test.shape))
 #X_train[7]
 '''Since all our features are integer values that range from 0 to 255 it is not absolutely necessary to standardize our input data. 
 However we will perform a simple scaling of the data by dividing all values by the max value 255'''
 X_train = X_train/255
 #print (X_train[7])
-print (y_train[7])
+#print (y_train[7])
 
 # Change the values of y_train and y_test to an array with binary values 
 def one_hot(Y): 
@@ -57,5 +61,14 @@ def one_hot(Y):
 y_train = one_hot(y_train)
 y_test = one_hot(y_test)
 
-print (y_train.shape)
-print (y_train[7])
+#print ("shape of y_train {}".format(y_train.shape))
+
+# Design the neural network
+network = [
+    Connected(28 * 28, 30),
+    Sigmoid(),
+    Connected(30,10),
+    Sigmoid()    
+]
+
+
