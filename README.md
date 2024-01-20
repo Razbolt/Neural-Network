@@ -36,7 +36,7 @@ To use this neural network implementation:
 ## Example
 Here's an example of how to use the neural network:
 
-\```python
+```python
 from Task1 import MyNeuralNetwork
 
 # Initialize the neural network
@@ -52,7 +52,7 @@ training_loss.append(last_epoch_loss)
 # Test the neural network
 loss, acc = nn1.test(X_test, y_test)
 print(f'Test Loss: {loss}, Test Accuracy: {acc}')
-\```
+```
 
 
 ![Alt text](image.png)
