@@ -53,6 +53,10 @@ training_loss.append(last_epoch_loss)
 loss, acc = nn1.test(X_test, y_test)
 print(f'Test Loss: {loss}, Test Accuracy: {acc}')
 
+
+
+
+
 ![Alt text](image.png)
 
 ![Alt text](image-1.png)
